@@ -46,7 +46,18 @@ function App() {
         Open Collapsible
       </button>
       <div ref={contentEl} className="hidden">
-        <p>Lorem ipsum...</p>
+        <button
+          id="collapsible-button"
+          type="button"
+          className="collapsible"
+          onClick={handleClick}
+        >
+          Cleaning Supplies
+        </button>
+        <button className="ctgry">Lorem ipsum...</button>
+        <button className="ctgry">Lorem ipsum...</button>
+        <button className="ctgry">Lorem ipsum...</button>
+        <button className="ctgry">Lorem ipsum...</button>
       </div>
     </div>
   );
