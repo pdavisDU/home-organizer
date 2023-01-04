@@ -57,6 +57,7 @@
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
+  position: relative;
   padding: 0 18px;
   display: none;
   overflow: hidden;
@@ -80,3 +81,33 @@
   cursor: pointer;
   display: block;
 }
+
+
+.sub-content-container {
+  position: absolute;
+}
+
+/* adding sub-content */
+
+.sub-content {
+  position: absolute;
+  left: 0;
+}
+
+.sub-ctgry {
+  background-color: #444;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  display: block;
+}
+
+
+
+
