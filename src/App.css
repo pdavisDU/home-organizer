@@ -70,6 +70,7 @@
 
 .ctgry {
   background-color: #444;
+  position: relative;
   border: none;
   color: white;
   padding: 15px 32px;
