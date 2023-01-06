@@ -1,20 +1,9 @@
 import React, { useRef } from "react";
-function App() {
+function Collapsible() {
   const contentEl = useRef(null);
 
   const handleClick = () => {
-    console.log("Button was clicked");
-    console.log(
-      `content is currently ${
-        contentEl.current.classList.contains("hidden") ? "hidden" : "visible"
-      }`
-    );
     contentEl.current.classList.toggle("hidden");
-    console.log(
-      `Content is now ${
-        contentEl.current.classList.contains("hidden") ? "hidden" : "visible"
-      }`
-    );
   };
 
   return (
@@ -29,6 +18,7 @@ function App() {
       </button>
       <div ref={contentEl} className="hidden">
         <button className="ctgry">Cleaning Supplies</button>
+        <button className="ctgry">Laundry Cleaning</button>
         <button className="ctgry">Tools</button>
         <button className="ctgry">Food</button>
       </div>
@@ -36,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default Collapsible;
