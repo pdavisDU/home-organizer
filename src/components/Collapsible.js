@@ -1,4 +1,7 @@
 import React, { useRef } from "react";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
+
 function Collapsible() {
   const contentEl = useRef(null);
 
@@ -17,7 +20,9 @@ function Collapsible() {
         Open Collapsible
       </button>
       <div ref={contentEl} className="hidden">
-        <button className="ctgry">Cleaning Supplies</button>
+        <Link href="/CleaningSupplies">
+          <button className="ctgry">Cleaning Supplies</button>
+        </Link>
         <button className="ctgry">Laundry Cleaning</button>
         <button className="ctgry">Tools</button>
         <button className="ctgry">Food</button>
