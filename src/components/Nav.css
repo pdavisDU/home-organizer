@@ -1,0 +1,35 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f3f3; /* Add your desired background color */
+    padding: 10px 20px; /* Add padding as needed */
+    color: rgb(137, 133, 133); /* Set the text color to white or your desired color */
+  }
+  
+  .menu {
+    position: relative;
+    left: 5%;
+    text-align: center;
+    font-size: 24px; /* Set the font size as needed */
+    flex-grow: 1;
+  }
+  
+  ul {
+    list-style-type: none;
+    /* padding: 0;
+    margin: 0; */
+    display: flex;
+    /* justify-content:space-around; */
+    /* align-items: center; */
+  }
+  
+  li {
+    margin-right: 20px; /* Add margin between the list items */
+    cursor: pointer;
+  }
+  
+  li:last-child {
+    margin-right: 0; /* Remove margin from the last list item */
+  }
+  
