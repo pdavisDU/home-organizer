@@ -8,8 +8,8 @@
   }
   
   .menu {
-    position: relative;
-    left: 5%;
+    position: relative; /* for the text to be centered properly for the title we had to make position relative and left by n% */
+    left: 7.5%;
     text-align: center;
     font-size: 24px; /* Set the font size as needed */
     flex-grow: 1;
@@ -25,11 +25,11 @@
   }
   
   li {
-    margin-right: 20px; /* Add margin between the list items */
+    margin-right: 30px; /* Add margin between the list items */
     cursor: pointer;
   }
   
   li:last-child {
-    margin-right: 0; /* Remove margin from the last list item */
+    margin-right: 1; /* Remove margin from the last list item */
   }
   
