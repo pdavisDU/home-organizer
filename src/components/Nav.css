@@ -1,35 +1,85 @@
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f4f3f3; /* Add your desired background color */
-    padding: 10px 20px; /* Add padding as needed */
-    color: rgb(137, 133, 133); /* Set the text color to white or your desired color */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f3f3;
+  padding: 10px 20px;
+}
+
+.nav-title {
+  font-size: 24px;
+  color: rgb(137, 133, 133);
+  flex-grow: 1;
+  text-align: center;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #ddd;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  margin-left: auto;
+}
+
+.left-container, .right-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.right-container {
+  justify-content: flex-end;
+}
+
+/* Initially hide the nav buttons */
+.nav-btn {
+  display: none;
+}
+
+/* Display the nav buttons when showMenu state is true */
+.nav-btn.show {
+  display: flex;
+}
+
+/* Media query for screens up to 768px */
+@media (max-width: 768px) {
+  .hamburger {
+      display: block;
   }
-  
-  .menu {
-    position: relative; /* for the text to be centered properly for the title we had to make position relative and left by n% */
-    left: 5%;
-    text-align: center;
-    font-size: 24px; /* Set the font size as needed */
-    flex-grow: 1;
+
+  .nav-links {
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      flex-direction: column;
+      background-color: #f4f3f3;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      display: none;
+      gap: 10px;
+      padding: 10px;
   }
-  
-  ul {
-    list-style-type: none;
-    /* padding: 0;
-    margin: 0; */
-    display: flex;
-    /* justify-content:space-around; */
-    /* align-items: center; */
+
+  .nav-links.active {
+      display: flex;
   }
-  
-  li {
-    margin-right: 30px; /* Add margin between the list items */
-    cursor: pointer;
-  }
-  
-  li:last-child {
-    margin-right: 1; /* Remove margin from the last list item */
-  }
-  
+}
