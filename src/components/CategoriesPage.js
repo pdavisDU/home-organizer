@@ -1,9 +1,9 @@
 import React from "react";
-
+import Nav from "./Nav";
 function CategoriesPage() {
   return (
     <div>
-      <h2>Categories Page</h2>
+      <Nav />
     </div>
   );
 }
