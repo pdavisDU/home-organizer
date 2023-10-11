@@ -5,8 +5,8 @@ import {
   Routes,
   Switch,
 } from "react-router-dom";
-import Homepage from "./components/Homepage";
-import CategoriesPage from "./components/CategoriesPage";
+import Homepage from "./frontend/components/Homepage";
+import CategoriesPage from "./frontend/components/CategoriesPage";
 
 function App() {
   return (

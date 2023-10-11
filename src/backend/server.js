@@ -7,7 +7,7 @@ const app = express();
 const authRoutes = require("./routes/authRoutes");
 
 // Connect to MongoDB using Mongoose
-mongoose.connect("mongodb://localhost:27017/yourdbname", {
+mongoose.connect("mongodb://localhost:27017/userDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -20,10 +20,11 @@ mongoose.connection.on("error", (err) => {
   console.error(`Failed to connect to MongoDB with error: ${err}`);
 });
 
+// Other routes and middleware
+app.use(express.json()); // for parsing application/json
+
 // Mount the authentication routes
 app.use("/auth", authRoutes);
-
-// Other routes and middleware
 
 // Start the server
 const PORT = process.env.PORT || 3000;

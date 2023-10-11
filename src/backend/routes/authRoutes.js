@@ -6,13 +6,23 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 // Registration route
-router.post("/register", async (req, res) => {
-  // Handle user registration logic (validate, hash password, save to database)
-});
+const User = require("../models/User");
 
-// Login route
-router.post("/login", async (req, res) => {
-  // Handle user login logic (verify credentials, create JWT, send response)
+router.post("/register", async (req, res) => {
+  const { username, password } = req.body;
+
+  // Check if user already exists
+  const existingUser = await User.findOne({ username });
+  if (existingUser) return res.status(400).send("User already exists");
+
+  // Hash the password
+  const hashedPassword = await bcrypt.hash(password, 10);
+
+  // Create new user
+  const user = new User({ username, password: hashedPassword });
+  await user.save();
+
+  res.send("User registered successfully");
 });
 
 module.exports = router;

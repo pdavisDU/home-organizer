@@ -12,10 +12,10 @@
     box-sizing: border-box;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 20px 40px;
     border-radius: 5px;
     width: 30%;
-    height: 30%;
+    height: auto;
 }
 
 .register-box form {
@@ -54,4 +54,43 @@ h2 {
     width: 80px;  /* Set a width that accommodates the longest label */
     text-align: right;
     margin-right: 10px;  /* Some spacing between the label and the input */
+}
+
+
+.register-box form div { /* For each div inside the form */
+    display: flex;
+    align-items: center;  /* Vertical alignment */
+    width: 100%;
+    margin: 10px 0; /* Some vertical spacing between each div */
+}
+
+.register-box input {
+    flex-grow: 1; /* Allow the input to take up available space */
+    padding: 5px;
+    margin-right: 10px; /* Spacing between input and the icon */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) { /* Tablets and below */
+    .register-box {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile devices */
+    .register-box {
+        width: 100%;
+    }
+
+    .register-wrapper label {
+        width: auto; /* Adjust for mobile, so it doesn't force a particular width */
+        text-align: left;
+    }
+}
+
+.register-box button[type="button"] {
+    /* ... other styles ... */
+    margin-left: 10px; /* Add some space between the input and the visibility toggle */
 }
